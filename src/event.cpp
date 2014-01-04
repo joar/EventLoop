@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <event.h>
+#include <event.hpp>
 #include <Windows.h>
 #include <iostream>
 #include <stdio.h>
@@ -7,7 +7,7 @@
 
 Event *root_event;
 
-BOOL Event::ctrl_handler(DWORD type) {
+static BOOL Event::ctrl_handler(DWORD type) {
 	message_t message;
 	switch (type) {
 	case CTRL_C_EVENT:
